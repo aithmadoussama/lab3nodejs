@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #2563eb;
+    /* Bleu moderne */
+    --primary-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    /* Gris très clair pour le fond */
+    --text-main: #1e293b;
+    /* Gris foncé pour le texte */
+    --text-muted: #64748b;
+    /* Gris moyen pour les détails */
+    --white: #ffffff;
+    --error: #ef4444;
+    /* Rouge doux */
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    background: var(--white);
+    color: var(--text-main);
+    padding: 1.25rem 2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Containers Cards */
+.form-add,
+.user-list {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+/* Formulaires */
+input[type="text"],
+input[type="email"] {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.form-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Liste Utilisateurs */
+.user-list h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--text-main);
+}
+
+/* Erreur */
+.error {
+    background-color: #fef2f2;
+    color: var(--error);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--error);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background: var(--white);
+    color: var(--text-muted);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-size: 0.875rem;
+    margin-top: 4rem;
+}
